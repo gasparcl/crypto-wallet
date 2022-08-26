@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Description</th>
       <th>Acronym</th>
       <th>Url image</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @coins.each do |coin| %>
       <tr>
+        <td><%= image_tag coin.url_image, height: 40 %></td>
         <td><%= coin.description %></td>
         <td><%= coin.acronym %></td>
         <td><%= coin.url_image %></td>
