@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CryptoWallet</title>
+    <title>Crypto Wallet</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header style="background: #f1f1f1; padding: 5rem 3rem;">
+      <h1>CABEÇALHO - Header</h1>
+    </header>
+    <div style="height: 70vh; padding: 5rem;">
+      <%= yield %>
+    </div>
+    <footer style="background: #f1f1f1; padding:5rem 3rem;">
+      <h1>RODAPE - Footer</h1>
+    </footer>
   </body>
 </html>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'app', to: 'spa#index'
+  get 'app/*path', to: 'spa#index'
   get 'welcome/index'
   resources :coins
 
