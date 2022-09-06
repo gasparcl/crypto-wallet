@@ -13,8 +13,13 @@
 <p style="display:flex; align-items:center;">
   <strong>Url image:</strong>
   <span style="padding: 0 .5rem">
-    <%= image_tag @coin.url_image, height: 40 %>
+    <%= image_tag @coin.url_image, height: 30 %>
   </span>
+</p>
+
+<p>
+  <strong>Mining type:</strong>
+  <%= @coin.mining_type.acronym%>
 </p>
 
 <%= link_to 'Edit', edit_coin_path(@coin) %> |

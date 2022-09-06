@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :mining_types
   get 'app', to: 'spa#index'
   get 'app/*path', to: 'spa#index'
   get 'welcome/index'
