@@ -12,31 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label t('form.descr') %>
     <%= form.text_field :description %>
   </div>
 
   <div class="field">
-    <%= form.label :acronym %>
+    <%= form.label t('form.acronym') %>
     <%= form.text_field :acronym %>
   </div>
   <div style="display: flex; align-items: center;">
     <div class="field" style="margin-right: .5rem;">
-      <%= form.label :url_image %>
+      <%= form.label t('form.url_image') %>
       <%= form.text_field :url_image %>
     </div>
-    <%= image_tag coin.url_image, height:40 %>
   </div>
   
   <div class="field">
-    <%= form.label :mining_type_id %>
+    <%= form.label t('form.mining_type.label') %>
     <%# form.select("mining_type_id", MiningType.all.pluck(:description, :id), {include_blank: "Select mining type..."}) %> 
     <%# It could be done above with .collect or .map, instead of .pluck method, although you cannot access your Model inside a HTML file, because your hurting the mvc architecture/security of your application...%>
     <%# The correct way to do that above is by that below:%>
-    <%= form.select("mining_type_id", @mining_type_options, {include_blank: "Select mining type..."}) %>
+    <%= form.select("mining_type_id", @mining_type_options, {include_blank: t('form.mining_type.options_label')}) %>
   </div>
   
   <div class="actions">
-    <%= form.submit %>
+    <% if @editing_form %>
+      <%= form.submit t("coins.edit.button_label"), style: "padding: 0rem .2rem;" %>
+    <% else %>
+      <%= form.submit t("coins.new.button_label"), style: "padding: 0rem .2rem;" %>
+    <% end %>
   </div>
 <% end %>

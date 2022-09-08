@@ -33,25 +33,25 @@ namespace :dev do
         description: "Dash",
         acronym: "DASH",
         url_image: "https://ih1.redbubble.net/image.406055498.8711/ap,550x550,12x12,1,transparent,t.png",
-        mining_type: MiningType.all.sample
+        mining_type: MiningType.find_by(acronym: 'PoS')
       },
       {
         description: "Ethereum",
         acronym: "ETH",
         url_image: "https://st3.depositphotos.com/1076504/15705/i/450/depositphotos_157059264-stock-photo-ethereum-encryption-concept.jpg",
-        mining_type: MiningType.all.sample
+        mining_type: MiningType.find_by(acronym: 'PoC')
       }, 
       {
         description: "Iota",
         acronym: "IOT",
         url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/1720.png",
-        mining_type: MiningType.all.sample
+        mining_type: MiningType.find_by(acronym: 'PoW')
       }, 
       {
         description: "ZCash",
         acronym: "ZEC",
         url_image: "https://www.cryptocompare.com/media/351360/zec.png",
-        mining_type: MiningType.all.sample
+        mining_type: MiningType.find_by(acronym: 'PoS')
       }, 
     ]
     show_spinner("Registering coins...") do

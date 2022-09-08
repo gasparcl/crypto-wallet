@@ -10,8 +10,16 @@
   </head>
 
   <body>
-    <header style="background: #e1e1e1; padding: 5rem 3rem;">
+    <header style="background: #e1e1e1; padding: 5rem 3rem; display: flex; justify-content: space-between;">
       <h1>HEADER</h1>
+      <div>
+        <span style='padding: .5rem;'>
+          <%= link_to 'Português', root_path(locale: 'pt-BR') %>
+        </span>
+        <span style='padding: .5rem;'>
+          <%= link_to 'English', root_path(locale: 'en') %>
+        </span>
+      </div>
     </header>
     <div style="height: 70vh; padding: 5rem;">
       <%= yield %>

@@ -12,16 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label t('form.descr') %>
     <%= form.text_field :description %>
   </div>
 
   <div class="field">
-    <%= form.label :acronym %>
+    <%= form.label t('form.acronym') %>
     <%= form.text_field :acronym %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <% if @editing_form %>
+      <%= form.submit t("mining_types.edit.button_label"), style: "padding: 0rem .2rem;" %>
+    <% else %>
+      <%= form.submit t("mining_types.new.button_label"), style: "padding: 0rem .2rem;" %>
+    <% end %>
   </div>
 <% end %>

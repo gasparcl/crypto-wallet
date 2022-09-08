@@ -1,0 +1,121 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+pt-BR:
+  # ╔╦╗╔═╗╔╦╗╔═╗╦  ╔═╗                  
+  # ║║║║ ║ ║║║╣ ║  ╚═╗                  
+  # ╩ ╩╚═╝═╩╝╚═╝╩═╝╚═╝ 
+  activerecord:
+    models:
+      coin:
+        one: "Criptomoeda"
+        other: "Criptomoedas"
+      mining_type:
+        one: "Tipo de Mineração"
+        other: "Tipos de Mineração"
+    attributes:
+      coin:
+        id: 'Código'
+        description: 'Descrição'
+        acronym: 'Acrônimo'
+        url_image: 'URL da imagem'
+        mining_type_id: 'Tipo de Mineração'
+        updated_at: 'Atualizado em'
+        created_at: 'Criado em'
+      mining_type:
+        id: 'Código'
+        description: 'Descrição'
+        acronym: 'Acrônimo'
+        updated_at: 'Atualizado em'
+        created_at: 'Criado em'
+
+  # ╔╦╗╔═╗╦╔╗╔                          
+  # ║║║╠═╣║║║║                          
+  # ╩ ╩╩ ╩╩╝╚╝    
+  hello_world: "Olá, Mundo!"
+  menu:
+    subtitle:
+      registering: "Cadastro"
+    links:
+      coin: "Criptomoeda"
+      mining_type: "Tipo de Mineração"
+  links:
+    show: "Ver mais"
+    edit: "Editar"
+    delete: "Deletar"
+    back: "Voltar"
+    new_coin: "Nova Moeda"
+    new_mining_type: "Novo Tipo de Mineração"
+  confirmations:
+    delete_coin: "Deseja realmente deletar a Moeda - %{descr}?"
+    delete_mining_type: "Deseja realmente deletar o Tipo de Mineração - %{descr}?"
+  form:
+    descr: "Descrição"
+    acronym: "Acrônimo"
+    url_image: "Url Imagem"
+    mining_type: 
+      label: "Tipo de Mineração"
+      options_label: "Selecione o tipo de mineração..."
+  coins:
+    table:
+      title: "Criptomoedas"
+      url_image: "Imagem"
+      descr: "Descrição"
+      acronym: "Acrônimo"
+      mining_type: "Tipo de Mineração"
+    new:
+      title: "Nova Moeda"
+      button_label: "Criar moeda"
+    show:
+      title: "Detalhes - %{coin_descr}" 
+      descr: "Descrição"
+      acronym: "Acrônimo"
+      url_image: "Imagem"
+      mining_type: "Tipo de Mineração"
+    edit:
+      title: "Editando moeda - %{coin_descr}"
+      button_label: "Salvar"
+  mining_types:
+    table:
+      title: "Tipos de Mineração"
+      descr: "Descrição"
+      acronym: "Acrônimo"
+    new:
+      title: "Novo Tipo de Mineração"
+      button_label: "Criar Tipo de Mineração"
+    show:
+      title: "Detalhes - %{mining_type_descr}" 
+      descr: "Descrição"
+      acronym: "Acrônimo"
+    edit:
+      title: "Editando Tipo de Mineração - %{mining_type_descr}"
+      button_label: "Salvar"
+      

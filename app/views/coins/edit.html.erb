@@ -1,6 +1,8 @@
-<h1>Editing Coin</h1>
+<h1><%= t('coins.edit.title', deep_interpolation:true, coin_descr: @coin.description) %></h1>
 
-<%= render 'form', coin: @coin %>
+<br/>
 
-<%= link_to 'Show', @coin %> |
-<%= link_to 'Back', coins_path %>
+<%= render 'form', coin: @coin, editing: @editing_form %>
+
+<%= link_to t('links.show'), @coin %> |
+<%= link_to t('links.back'), coins_path %>

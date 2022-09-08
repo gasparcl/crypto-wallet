@@ -30,4 +30,92 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  # ╔╦╗╔═╗╔╦╗╔═╗╦  ╔═╗                  
+  # ║║║║ ║ ║║║╣ ║  ╚═╗                  
+  # ╩ ╩╚═╝═╩╝╚═╝╩═╝╚═╝ 
+  activerecord:
+    models:
+      coin: 
+        one: 'Coin'
+        other: 'Coins'
+      mining_type:
+        one: 'Mining Type'
+        other: 'Mining Types'
+    attributes:
+      coin:
+        id: 'id'
+        description: 'Description'
+        acronym: 'Acronym'
+        url_image: 'URL image'
+        mining_type_id: 'Mining Type'
+        updated_at: 'Updated at'
+        created_at: 'Created at'
+      mining_type:
+        id: 'id'
+        description: 'Description'
+        acronym: 'Acronym'
+        updated_at: 'Updated at'
+        created_at: 'Created at'
+
+  # ╔╦╗╔═╗╦╔╗╔                          
+  # ║║║╠═╣║║║║                          
+  # ╩ ╩╩ ╩╩╝╚╝    
   hello: "Hello world"
+  menu:
+    subtitle:
+      registering: "Registering"
+    links:
+      coin: "Coin"
+      mining_type: "Mining Type"
+  links:
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    back: "Back"
+    new_coin: "New Coin"
+    new_mining_type: "New Mining Type"
+  confirmations:
+    delete_coin: "Do you really want to delete Coin - %{descr}?"
+    delete_mining_type: "Do you really want to delete Mining Type - %{descr}?"
+  form:
+      descr: "Description"
+      acronym: "Acronym"
+      url_image: "Url Image"
+      mining_type: 
+        label: "Mining type"
+        options_label: "Select mining type..."
+  coins:
+    table:
+      title: "Crypto Coins"
+      url_image: "Image"
+      descr: "Description"
+      acronym: "Acronym"
+      mining_type: "Mining Type"
+    new:
+      title: "New Coin"
+      button_label: "Create Coin"
+    show: 
+      title: "Detailments - %{coin_descr}" 
+      descr: "Description"
+      acronym: "Acronym"
+      url_image: "Image"
+      mining_type: "Mining Type"
+    edit:
+      title: "Editing Coin - %{coin_descr}"
+      button_label: "Save"
+  mining_types:
+    table:
+      title: "Mining Types"
+      descr: "Description"
+      acronym: "Acronym"
+    new:
+      title: "New Mining Type"
+      button_label: "Create Mining Type"
+    show:
+      title: "Detailments - %{mining_type_descr}" 
+      descr: "Description"
+      acronym: "Acronym"
+    edit:
+      title: "Editing Mining Type - %{mining_type_descr}"
+      button_label: "Save"
+      

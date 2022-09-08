@@ -61,7 +61,7 @@
 
 **============================**
 
-**class 75 - "COnhecendo os métodos .map e o .pluck" - the .pluck method is an abreviattion of the .map method** 
+**class 75 - "Conhecendo os métodos .map e o .pluck" - the .pluck method is an abreviattion of the .map method** 
     <!-- example: 
         ** THE .MAP() METHOD CAN BE USED ALSO AS .COLLECT() **
         c = Coin.all
@@ -74,6 +74,27 @@
             output =>>  [["Bitcoin", "BTC"], ["Ethereum", "ETH"], ...]  
 
         
+    -->
+
+**============================**
+
+**class 79 - "Ativando o I18n" - Application Internationalization** 
+    <!-- 1) Add to Gemfile gem '"rails-i18n", "~> 5.1"' - if your rails version is 5.x.x or above  -->
+    <!-- 2) exec. bundle(bundle install) -->
+    <!-- 3) create a folder on root/config/initializers/locale.rb and paste the defaul config: 
+        # Permitted locales available for the application
+        I18n.available_locales = [:en, "pt-BR"]
+        # Set default locale to something other than :en
+        I18n.default_locale = :en
+        note: In case that you want to use a different folder from default to get your tranlation files, paste the code below:
+            # I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')] - desired directory(path) 
+    -->
+
+**============================**
+
+**class 80 - "Usando o I18n" - Application Internationalization - p2** 
+    <!-- 1) There are 2 most commom methods in I18n library - I18n.t()(translate) and I18n.l()(localize) - set some data into local format 
+    - On a view page, you can use the methods without library prefix/class(I18n) - it would be like that - t("translation-key") and l()
     -->
 
 **============================**

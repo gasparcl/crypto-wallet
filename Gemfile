@@ -5,6 +5,7 @@ ruby '2.7.2'
 
 gem 'webpacker', '~> 4.3.x'
 gem "tty-spinner"
+gem 'rails-i18n', '~> 5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

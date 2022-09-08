@@ -1,26 +1,30 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= t('coins.show.title', deep_interpolation:true, coin_descr: @coin.description) %></h1>
+
+<br/>
+
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('coins.show.descr') %>:</strong>
   <%= @coin.description %>
 </p>
 
 <p>
-  <strong>Acronym:</strong>
+  <strong><%= t('coins.show.acronym') %>:</strong>
   <%= @coin.acronym %>
 </p>
 
 <p style="display:flex; align-items:center;">
-  <strong>Url image:</strong>
+  <strong><%= t('coins.show.url_image') %>:</strong>
   <span style="padding: 0 .5rem">
     <%= image_tag @coin.url_image, height: 30 %>
   </span>
 </p>
 
 <p>
-  <strong>Mining type:</strong>
+  <strong><%= t('coins.show.mining_type') %>:</strong>
   <%= @coin.mining_type.acronym%>
 </p>
 
-<%= link_to 'Edit', edit_coin_path(@coin) %> |
-<%= link_to 'Back', coins_path %>
+<%= link_to t('links.edit'), edit_coin_path(@coin) %> |
+<%= link_to t('links.back'), coins_path %>
