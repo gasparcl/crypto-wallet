@@ -38,9 +38,9 @@
   
   <div class='d-flex gap-1'>
     <% if @editing_form %>
-      <%= form.submit t("coins.edit.button_label"), class: 'btn btn-success my-3', type: 'button' %>
+      <%= form.submit t("coins.edit.button_label"), class: 'btn btn-success my-3' %>
     <% else %>
-      <%= form.submit t("coins.new.button_label"), class: 'btn btn-success my-3', type: 'button' %>
+      <%= form.submit t("coins.new.button_label"), class: 'btn btn-success my-3'%>
     <% end %>
 
     <%= link_to t('links.back'), coins_path, class: 'btn btn-outline-secondary my-3', type: 'button' %>
