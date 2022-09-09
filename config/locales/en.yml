@@ -86,7 +86,7 @@ en:
         options_label: "Select mining type..."
   coins:
     table:
-      title: "Crypto Coins"
+      title: "Cryptocurrencies"
       url_image: "Image"
       descr: "Description"
       acronym: "Acronym"

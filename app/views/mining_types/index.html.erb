@@ -2,7 +2,7 @@
 
 <h1><%= t('mining_types.table.title') %></h1>
 <br/>
-<table>
+<table class='table table-hover'>
   <thead>
     <tr>
       <th><%= t('mining_types.table.descr') %></th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= mining_type.description %></td>
         <td><%= mining_type.acronym %></td>
-        <td><%= link_to t('links.show'), mining_type %></td>
-        <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type) %></td>
-        <td><%= link_to t('links.delete'), mining_type, method: :delete, data: { confirm: t('confirmations.delete_mining_type', deep_interpolation:true, descr: mining_type.description) } %></td>
+        <td><%= link_to t('links.show'), mining_type, class: 'btn btn-outline-primary btn-sm', type: 'button' %></td>
+        <td><%= link_to t('links.edit'), edit_mining_type_path(mining_type), class: 'btn btn-outline-warning btn-sm', type: 'button' %></td>
+        <td><%= link_to t('links.delete'), mining_type, method: :delete, data: { confirm: t('confirmations.delete_mining_type', deep_interpolation:true, descr: mining_type.description) }, class: 'btn btn-outline-danger btn-sm', type: 'button' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,5 +26,7 @@
 
 <br>
 
-<%= link_to t('links.new_mining_type'), new_mining_type_path %>
-<p><%= link_to t('links.back'), root_path %></p>
+<div class='d-flex justify-content-end gap-1'>
+  <%= link_to t('links.new_mining_type'), new_mining_type_path, class: 'btn btn-success btn-sm', type: 'button' %>
+  <%= link_to t('links.back'), root_path, class: 'btn btn-outline-secondary btn-sm', type: 'button' %>
+</div>

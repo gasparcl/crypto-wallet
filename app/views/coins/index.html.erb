@@ -2,9 +2,9 @@
 
 <h1><%= t('coins.table.title')%></h1>
 <br/>
-<table>
+<table class='table table-hover'>
   <thead>
-    <tr>
+    <tr class='text-center'>
       <th><%= t('coins.table.url_image')%></th>
       <th><%= t('coins.table.descr')%></th>
       <th><%= t('coins.table.acronym')%></th>
@@ -20,15 +20,15 @@
         <td><%= coin.description %></td>
         <td><%= coin.acronym %></td>
         <td><%= coin.mining_type.acronym%></td>
-        <td><%= link_to t("links.show"), coin %></td>
-        <td><%= link_to t("links.edit"), edit_coin_path(coin) %></td>
-        <td><%= link_to t("links.delete"), coin, method: :delete, data: { confirm: t('confirmations.delete_coin', deep_interpolation:true, descr: coin.description) } %></td>
+        <td><%= link_to t("links.show"), coin, class: 'btn btn-outline-primary btn-sm', type: 'button' %></td>
+        <td><%= link_to t("links.edit"), edit_coin_path(coin), class: 'btn btn-outline-warning btn-sm', type: 'button' %></td>
+        <td><%= link_to t("links.delete"), coin, method: :delete, data: { confirm: t('confirmations.delete_coin', deep_interpolation:true, descr: coin.description) }, class: 'btn btn-outline-danger btn-sm', type: 'button' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<p><%= link_to t('links.new_coin'), new_coin_path %></p>
-<p><%= link_to t('links.back'), root_path %></p>
+<div class='d-flex justify-content-end gap-1'>
+  <%= link_to t('links.new_coin'), new_coin_path, class: 'btn btn-success btn-sm', type: 'button' %>
+  <%= link_to t('links.back'), root_path, class: 'btn btn-outline-secondary btn-sm', type: 'button' %>
+</div>

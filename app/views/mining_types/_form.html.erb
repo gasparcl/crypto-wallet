@@ -11,21 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label t('form.descr') %>
-    <%= form.text_field :description %>
+  <div class='col-6'>
+    <div class="form-group">
+      <%= form.label t('form.descr') %>
+      <%= form.text_field :description, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label t('form.acronym') %>
+      <%= form.text_field :acronym, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label t('form.acronym') %>
-    <%= form.text_field :acronym %>
-  </div>
-
-  <div class="actions">
+  <div class="d-flex gap-1">
     <% if @editing_form %>
-      <%= form.submit t("mining_types.edit.button_label"), style: "padding: 0rem .2rem;" %>
+      <%= form.submit t("mining_types.edit.button_label"), class: 'btn btn-success my-3', type: 'button' %>
     <% else %>
-      <%= form.submit t("mining_types.new.button_label"), style: "padding: 0rem .2rem;" %>
+      <%= form.submit t("mining_types.new.button_label"), class: 'btn btn-success my-3', type: 'button' %>
     <% end %>
+
+    <%= link_to t('links.back'), mining_types_path, class: 'btn btn-outline-secondary my-3' %>
   </div>
 <% end %>

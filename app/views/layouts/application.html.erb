@@ -6,22 +6,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header style="background: #e1e1e1; padding: 5rem 3rem; display: flex; justify-content: space-between;">
-      <h1>HEADER</h1>
-      <div>
-        <span style='padding: .5rem;'>
-          <%= link_to 'Português', root_path(locale: 'pt-BR') %>
-        </span>
-        <span style='padding: .5rem;'>
-          <%= link_to 'English', root_path(locale: 'en') %>
-        </span>
+    <header style="background: #e1e1e1; padding: 5rem 3rem; display: flex; justify-content: space-between; align-items: center;">
+      <h1 style='margin: 0 !important;'><%= link_to 'Crypto Wallet', root_path, style: 'text-decoration: initial;' %></h1>
+      <div class="btn-group" role="group" aria-label="Languages">
+        <%= link_to 'Português', {locale: 'pt-BR'}, class:'btn btn-primary btn-sm', type: "button"  %>
+        <%= link_to 'English', {locale: 'en'}, class:'btn btn-primary btn-sm', type: "button"  %>
       </div>
     </header>
-    <div style="height: 70vh; padding: 5rem;">
+    <div style="height: 62vh; padding: 5rem;">
       <%= yield %>
     </div>
     <footer style="background: #e1e1e1; padding:5rem 3rem;">

@@ -4,5 +4,5 @@
 
 <%= render 'form', mining_type: @mining_type, editing: @editing_form %>
 
-<%= link_to t('links.show'), @mining_type %> |
-<%= link_to t('links.back'), mining_types_path %>
+<%= link_to t('links.show'), @mining_type, class: 'btn btn-outline-primary btn-sm', type: 'button' %> 
+

@@ -98,3 +98,12 @@
     -->
 
 **============================**
+
+**class 87 - "Pré-compilando e isolando assets por controller" - Improve application performance** 
+    <!-- Inside config/initializers/assets.rb, include the command for precompiling your js and css assets:
+        for example:
+            Rails.application.config.assets.precompile += %w( cable.js welcome.js coins.js mining_types.js )
+            Rails.application.config.assets.precompile += %w( welcome.css scaffolds.css coins.css mining_types.css )
+      -->
+
+**============================**

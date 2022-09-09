@@ -26,5 +26,5 @@
   <%= @coin.mining_type.acronym%>
 </p>
 
-<%= link_to t('links.edit'), edit_coin_path(@coin) %> |
-<%= link_to t('links.back'), coins_path %>
+<%= link_to t('links.edit'), edit_coin_path(@coin), class: 'btn btn-warning', type: 'button' %> 
+<%= link_to t('links.back'), coins_path, class: 'btn btn-outline-secondary', type: 'button' %>

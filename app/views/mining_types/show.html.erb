@@ -14,5 +14,5 @@
   <%= @mining_type.acronym %>
 </p>
 
-<%= link_to t('links.edit'), edit_mining_type_path(@mining_type) %> |
-<%= link_to t('links.back'), mining_types_path %>
+<%= link_to t('links.edit'), edit_mining_type_path(@mining_type), class: 'btn btn-warning', type: 'button' %> 
+<%= link_to t('links.back'), mining_types_path, class: 'btn btn-outline-secondary', type: 'button' %>
